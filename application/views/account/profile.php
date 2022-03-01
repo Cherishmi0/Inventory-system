@@ -35,7 +35,7 @@
                   <h3 class="profile-username text-center"><?php echo $this->session->userdata['name']; ?></h3>
 
                   <p class="text-muted text-center">administrator</p>
-                  <p class="text-muted text-center">Date Created: <?php echo $profile->created_at; ?></p>
+                  <p class="text-muted text-center">Date : <?php echo $profile->created_at; ?></p>
 
                   <ul class="list-group list-group-unbordered mb-3">
                     <li class="list-group-item">
