@@ -177,25 +177,48 @@
               </li>
             </ul>
           </li>
-
-			<li class="nav-item has-treeview <?=($this->uri->segment(1)==='site')?'menu-open':''?>">
-				<a href="#" class="nav-link">
-					<i class="nav-icon fas fa-copy"></i>
-					<p>
-						Site Management
-						<i class="fas fa-angle-left right"></i>
-						<span class="badge badge-info right"></span>
-					</p>
-				</a>
-				<ul class="nav nav-treeview">
-					<li class="nav-item">
-						<a href="<?php echo base_url(); ?>site/add" class="nav-link <?=($this->uri->segment(1)==='site' && $this->uri->segment(2)==='add')?'active':''?>">
-							<i class="fa fa-cart-plus nav-icon"></i>
-							<p>Add Site</p>
-						</a>
-					</li>
-				</ul>
-			</li>
+    			<li class="nav-item has-treeview <?=($this->uri->segment(1)==='site')?'menu-open':''?>">
+    				<a href="#" class="nav-link">
+    					<i class="nav-icon fas fa-copy"></i>
+    					<p>
+    						Site Management
+    						<i class="fas fa-angle-left right"></i>
+    						<span class="badge badge-info right"></span>
+    					</p>
+    				</a>
+    				<ul class="nav nav-treeview">
+    					<li class="nav-item">
+    						<a href="<?php echo base_url(); ?>site/add" class="nav-link <?=($this->uri->segment(1)==='site' && $this->uri->segment(2)==='add')?'active':''?>">
+    							<i class="fa fa-cart-plus nav-icon"></i>
+    							<p>Add Site</p>
+    						</a>
+    					</li>
+    				</ul>
+    			</li>
+          <li class="nav-item has-treeview <?=($this->uri->segment(1)==='brand')?'menu-open':''?>">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-users"></i>
+              <p>
+                Localization
+                <i class="fas fa-angle-left right"></i>
+                <span class="badge badge-info right"></span>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="<?php echo base_url(); ?>brand" class="nav-link <?=($this->uri->segment(1)==='brand' && $this->uri->segment(2)=='')?'active':''?>">
+                  <i class="fa fa-list-ul nav-icon"></i>
+                  <p>Brand</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="<?php echo base_url(); ?>brand/add" class="nav-link <?=($this->uri->segment(1)==='brand' && $this->uri->segment(2)==='add')?'active':''?>">
+                  <i class="fa fa-user-plus nav-icon"></i>
+                  <p>Add Brand</p>
+                </a>
+              </li>
+            </ul>
+          </li>
         </ul>
       </nav>
       <!-- /.sidebar-menu -->

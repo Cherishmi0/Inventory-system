@@ -53,10 +53,10 @@
                   <select class="form-control" name="role">
                     <option value="">--Select Role--</option>
                     <option value="1" <?php echo set_value('role')==1?"selected":""; ?>>Power Admin</option>
-					  <option value="2" <?php echo set_value('role')==2?"selected":""; ?>>Director_Operation</option>
-					  <option value="3" <?php echo set_value('role')==3?"selected":""; ?>>CSM</option>
-					  <option value="4" <?php echo set_value('role')==4?"selected":""; ?>>Accountant</option>
-					  <option value="5" <?php echo set_value('role')==5?"selected":""; ?>>Supervisor</option>
+        					  <option value="2" <?php echo set_value('role')==2?"selected":""; ?>>Director_Operation</option>
+        					  <option value="3" <?php echo set_value('role')==3?"selected":""; ?>>CSM</option>
+        					  <option value="4" <?php echo set_value('role')==4?"selected":""; ?>>Accountant</option>
+        					  <option value="5" <?php echo set_value('role')==5?"selected":""; ?>>Supervisor</option>
                   </select>
                   <span class="text-danger"><?php echo form_error('role'); ?></span>
                 </div>
