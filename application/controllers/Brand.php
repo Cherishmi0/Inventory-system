@@ -24,8 +24,8 @@ class Brand extends CI_Controller {
 	public function add()
 	{
 		if ($this->input->server('REQUEST_METHOD') == 'POST'){
-			$this->form_validation->set_rules('name','Name','required|min_length[3]');
-            $this->form_validation->set_rules('code','Code','required|min_length[2]');
+			$this->form_validation->set_rules('name','Name','required|min_length[3]|is_unique[brand.name]');
+            $this->form_validation->set_rules('code','Code','required|min_length[2]|is_unique[brand.code]');
 			if ($this->form_validation->run() == TRUE){
 				$formData = array(
 		      		'name' => $this->input->post("name"),
@@ -45,8 +45,8 @@ class Brand extends CI_Controller {
     public function update()
 	{
 		if ($this->input->server('REQUEST_METHOD') == 'POST'){
-			$this->form_validation->set_rules('name','Name','required|min_length[3]');
-            $this->form_validation->set_rules('code','Code','required|min_length[2]');
+			$this->form_validation->set_rules('name','Name','required|min_length[3]|is_unique[brand.name]');
+            $this->form_validation->set_rules('code','Code','required|min_length[2]|is_unique[brand.code]');
 			if ($this->form_validation->run() == TRUE){
                 $formData = array(
 	                'name' => $this->input->post("name"),

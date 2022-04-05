@@ -31,35 +31,6 @@
 </head>
 <body class="hold-transition login-page">
 
-<div class="card-body" style="padding-left: 0% ; padding-right: 0% ; padding-top: 0%">
-	<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-		<ol class="carousel-indicators">
-			<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-			<li data-target="#carouselExampleIndicators" data-slide-to="1" class=""></li>
-			<li data-target="#carouselExampleIndicators" data-slide-to="2" class=""></li>
-		</ol>
-		<div class="carousel-inner">
-			<div class="carousel-item active">
-				<img class="d-block w-100" src="<?php echo base_url(); ?>dist/img/slider/slider1.jpg" alt="First slide">
-			</div>
-			<div class="carousel-item">
-				<img class="d-block w-100" src="<?php echo base_url(); ?>dist/img/slider/slider2.jpg" alt="Second slide">
-			</div>
-			<div class="carousel-item">
-				<img class="d-block w-100" src="<?php echo base_url(); ?>dist/img/slider/slider3.jpg" alt="Third slide">
-			</div>
-		</div>
-		<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-			<span class="sr-only">Previous</span>
-		</a>
-		<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-			<span class="carousel-control-next-icon" aria-hidden="true"></span>
-			<span class="sr-only">Next</span>
-		</a>
-	</div>
-</div>
-
 <div class="login-box" style="position: absolute; text-align: center; background:#fff">
 	<div class="login-logo">
 		<a href="<?php echo base_url(); ?>">
@@ -173,16 +144,6 @@
 	<!-- /.modal-dialog -->
 </div>
 <!-- /.modal -->
-
-<!-- Main Footer -->
-<footer class="main-footer">
-	<!-- To the right -->
-	<div class="float-right d-none d-sm-inline">
-		Anything you want
-	</div>
-	<!-- Default to the left -->
-	<strong>Copyright &copy; 2014-2019 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved.
-</footer>
 
 <!-- jQuery -->
 <script src="<?php echo base_url(); ?>plugins/jquery/jquery.min.js"></script>
