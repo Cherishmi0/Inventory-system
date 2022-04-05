@@ -28,6 +28,7 @@ class User extends CI_Controller {
             $this->form_validation->set_rules('last_name','Last Name','required|min_length[3]');
             $this->form_validation->set_rules('phone','Phone','required|regex_match[/^[0-9]{10}$/]');
             $this->form_validation->set_rules('role','Role','required');
+            $this->form_validation->set_rules('brand','Brand','required');
             $this->form_validation->set_rules('email','Email','required|valid_email|is_unique[user.email]');
             $this->form_validation->set_rules('password','Password','required|min_length[3]');
             $this->form_validation->set_rules('confirm_password','Password Confirmation','required|matches[password]');
@@ -37,6 +38,7 @@ class User extends CI_Controller {
 		      		'last_name' => $this->input->post("last_name"),
                     'phone' => $this->input->post("phone"),
                     'role' => $this->input->post("role"),
+                    'brand_id' => $this->input->post("brand"),
                     'email' => $this->input->post("email"),
                     'password' => md5($this->input->post("password")),
                     'status' => $this->input->post("status"),
@@ -58,6 +60,7 @@ class User extends CI_Controller {
             $this->form_validation->set_rules('last_name','Last Name','required|min_length[3]');
             $this->form_validation->set_rules('phone','Phone','required|regex_match[/^[0-9]{10}$/]');
             $this->form_validation->set_rules('role','Role','required');
+            $this->form_validation->set_rules('brand','Brand','required');
             if (!empty($this->input->post('password')))
             {
                 $this->form_validation->set_rules('password','Password','required|min_length[3]');
@@ -72,6 +75,7 @@ class User extends CI_Controller {
                         'role' => $this->input->post("role"),
                         'password' => md5($this->input->post("password")),
                         'status' => $this->input->post("status"),
+                        'brand_id' => $this->input->post("brand"),
                     );
                 }else{
                     $formData = array(
@@ -80,6 +84,7 @@ class User extends CI_Controller {
                         'phone' => $this->input->post("phone"),
                         'role' => $this->input->post("role"),
                         'status' => $this->input->post("status"),
+                        'brand_id' => $this->input->post("brand"),
                     );
                 }
 		 	  	$this->User_model->updateUser($formData,$this->input->get('user_id'));
@@ -92,14 +97,17 @@ class User extends CI_Controller {
 
 	public function getForm()
 	{
+		$data['brands'] = $this->User_model->getBrands();
+		
 		$this->load->view('common/header');
-		$this->load->view('user/user_form');
+		$this->load->view('user/user_form', $data);
 		$this->load->view('common/footer');
     }
     
     public function getUpdateForm()
 	{
         $data['user_details'] = $this->User_model->getUserById($this->input->get('user_id'));
+        $data['brands'] = $this->User_model->getBrands();
 		$this->load->view('common/header');
 		$this->load->view('user/user_update_form',$data);
 		$this->load->view('common/footer');

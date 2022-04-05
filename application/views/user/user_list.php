@@ -34,7 +34,8 @@
                   <th>Email</th>
                   <th>Phone</th>
                   <th>Role</th>
-                  <th>Status</th>
+                  <th>Status</th> 
+                  <th>Brand</th>
                   <th>Action</th>
                 </tr>
               </thead>
@@ -63,6 +64,7 @@
                       echo "Enable";
                     }
                   ?></td>
+                  <td><?php echo $user->name; ?></td>
                   <td>
                     <a href="<?php echo base_url(); ?>user/update?user_id=<?php echo $user->user_id; ?>" class="btn btn-sm">
                       <i class="fa fa-edit"></i> Edit

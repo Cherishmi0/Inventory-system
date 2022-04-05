@@ -21,6 +21,7 @@ class User_model extends CI_Model {
     public function getUsers(){
         $this->db->select('*');
         $this->db->from('user');
+        $this->db->join('brand', 'user.brand_id = brand.brand_id');
         $query=$this->db->get();
         return $query->result();
     }
@@ -31,5 +32,12 @@ class User_model extends CI_Model {
         $this->db->where('user_id', $user_id);
         $query=$this->db->get();
         return $query->row();
+    }
+
+     public function getBrands(){
+        $this->db->select('*');
+        $this->db->from('brand');
+        $query=$this->db->get();
+        return $query->result();
     }
 }

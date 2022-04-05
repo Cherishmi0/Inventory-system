@@ -60,6 +60,16 @@
                   </select>
                   <span class="text-danger"><?php echo form_error('role'); ?></span>
                 </div>
+                 <div class="form-group">
+                  <label>Brand</label>
+                  <select class="form-control" name="brand">
+                    <option value="">--Select Brand--</option>
+                    <?php foreach ($brands as $brand){ ?>
+                      <option value="<?php echo $brand->brand_id; ?>" <?php echo set_value('brand')==$brand->brand_id?"selected":""; ?>><?php echo $brand->name ?></option>
+                    <?php } ?>
+                  </select>
+                  <span class="text-danger"><?php echo form_error('brand'); ?></span>
+                </div>
                 <div class="form-group">
                   <label>Email</label>
                   <input type="email" name="email" class="form-control" value="<?php echo set_value('email'); ?>" placeholder="Email">
